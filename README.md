@@ -1,2 +1,3 @@
-# rocket
-case study
+# Rocket
+
+Case Study
