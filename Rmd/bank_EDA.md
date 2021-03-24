@@ -1,7 +1,7 @@
 Rocket Case Study - EDA
 ================
 Rachel K. Riggs<br>
-March 21, 2021
+March 24, 2021
 
 ``` r
 suppressPackageStartupMessages(library(tidyverse))
@@ -76,6 +76,12 @@ bank_additional_full %>%
 |  40 | admin.    | married | basic.6y    | no      | no      | no   | telephone | may   | mon           |      151 |        1 |   999 |        0 | nonexistent |          1.1 |         93.994 |        \-36.4 |     4.857 |        5191 | no |
 |  56 | services  | married | high.school | no      | no      | yes  | telephone | may   | mon           |      307 |        1 |   999 |        0 | nonexistent |          1.1 |         93.994 |        \-36.4 |     4.857 |        5191 | no |
 |  45 | services  | married | basic.9y    | unknown | no      | no   | telephone | may   | mon           |      198 |        1 |   999 |        0 | nonexistent |          1.1 |         93.994 |        \-36.4 |     4.857 |        5191 | no |
+
+``` r
+dim(bank_additional_full)
+```
+
+    ## [1] 41188    21
 
 Column types of the features:
 
@@ -198,7 +204,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
 ``` r
 bank_additional_full %>% 
@@ -233,7 +239,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ### observations:
 
@@ -265,7 +271,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
 ``` r
 # compare with a boxplot just for fun
@@ -277,7 +283,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-9-2.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-10-2.png)<!-- -->
 
   - No, both the mean and median ages are only 1 year apart, and the
     distributions are fairly similar.
@@ -294,7 +300,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
 Were the occupations clients held different for subscribers vs
 non-subscribers?
@@ -318,7 +324,7 @@ bank_additional_full %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 ### observations:
 
@@ -339,7 +345,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 Did marital status vary between the 2 groups?
 
@@ -356,7 +362,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
 
 `education`
 
@@ -370,7 +376,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
 
 ### observations:
 
@@ -398,7 +404,7 @@ bank_additional_full %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
 
 ### observations:
 
@@ -417,7 +423,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 
 ``` r
 # look at a table of the values
@@ -452,7 +458,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
 
 `default`: has housing loan?
 
@@ -464,7 +470,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
 
 Did housing loan status vary between the 2 groups?
 
@@ -481,7 +487,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 ## related with the last contact of the current campaign:
 
@@ -495,7 +501,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 Did communication type between the 2 groups?
 
@@ -512,7 +518,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
 `month`: last contact month of year
 
@@ -529,7 +535,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 
 ``` r
 # bank_additional_full %>% 
@@ -555,7 +561,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
   - While May was still the highest month, the difference between May
     and other months is less drastic for those who did subscribe.
@@ -572,7 +578,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
 Did day of week vary between the 2 groups?
 
@@ -586,7 +592,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
 ### observations:
 
@@ -612,7 +618,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
 
 ## other attributes:
 
@@ -628,7 +634,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-27-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
 
 ### observations:
 
@@ -651,7 +657,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-28-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-29-1.png)<!-- -->
 
 `pdays`: number of days that passed by after the client was last
 contacted from a previous campaign (999 means client was not previously
@@ -685,7 +691,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-30-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
 
 Of those that were contacted in a previous campaign, did it vary between
 the 2 groups?
@@ -705,7 +711,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-31-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
 
 `previous`: number of contacts performed before this campaign and for
 this client
@@ -719,7 +725,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-32-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
 
 ``` r
 # look at a table of the values
@@ -760,7 +766,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-33-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
 
 `poutcome`: outcome of the previous marketing campaign
 
@@ -773,7 +779,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-34-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
 
 ``` r
 bank_additional_full %>% 
@@ -785,7 +791,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-34-2.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-35-2.png)<!-- -->
 
 Did success or failure in a previous campaign number vary between the 2
 groups?
@@ -801,7 +807,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-35-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
 
   - Yes. For those that did subscribe, there is a higher success rate in
     previous campaigns.
@@ -819,7 +825,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-36-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
 
 Did employment variation rate vary between the 2 groups?
 
@@ -833,7 +839,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-37-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
 
   - Yes, there is some variation.
 
@@ -848,7 +854,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
 Did the consumer price index vary between the 2 groups?
 
@@ -862,7 +868,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
 
   - Yes, there is some variation.
 
@@ -877,7 +883,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
 
 Did the consumer price index vary between the 2 groups?
 
@@ -891,7 +897,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-42-1.png)<!-- -->
 
   - Yes, there is some variation.
 
@@ -906,7 +912,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-42-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
 
 Did the euribor 3 month rate vary between the 2 groups?
 
@@ -920,7 +926,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-43-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
 
   - Yes, there is some variation, but there is also some similarity.
 
@@ -935,7 +941,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
 
 Did the number of employees vary between the 2 groups?
 
@@ -949,7 +955,7 @@ bank_additional_full %>%
   theme_bw()
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-45-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
 
   - Yes, there is some variation, but there is also some similarity.
 
@@ -972,7 +978,7 @@ corr %>%
              lab = TRUE)
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-46-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
 
 ### observations:
 
@@ -1000,7 +1006,7 @@ corr_2 %>%
              lab = TRUE)
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-48-1.png)<!-- -->
 
 Alternatively, what is we dropped `emp.var.rate` and `euribor3m`?
 
@@ -1018,6 +1024,6 @@ corr_3 %>%
              lab = TRUE)
 ```
 
-![](bank_EDA_files/figure-gfm/unnamed-chunk-48-1.png)<!-- -->
+![](bank_EDA_files/figure-gfm/unnamed-chunk-49-1.png)<!-- -->
 
 This last one looks the best.

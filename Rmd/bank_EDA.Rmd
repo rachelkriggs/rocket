@@ -59,6 +59,11 @@ bank_additional_full %>%
   head() %>% knitr::kable()
 ```
 
+```{r}
+dim(bank_additional_full)
+```
+
+
 Column types of the features:
 
 ```{r}
