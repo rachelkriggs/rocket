@@ -26,7 +26,7 @@ The [data set from UC Irvine’s Machine Learning Repository](https://archive.ic
 4. Models
     - [Create a baseline model and experiment with several models using default parameters](https://github.com/rachelkriggs/rocket/blob/main/notebooks/03_model.ipynb)
     - [Tune hyperparameters of select models](https://github.com/rachelkriggs/rocket/blob/main/notebooks/04_tune.ipynb)
-    - Run the models on the held-out test set
+    - [Run the models on the held-out test set](https://github.com/rachelkriggs/rocket/blob/main/notebooks/05_test.ipynb)
 
 ### Metric
 The metric used to evaluate the performance for this problem is the AUC-ROC, or Area Under the Curve of the Receive Operating Characteristic.
@@ -39,6 +39,15 @@ See the [scikit-learn documentation on ROC](https://scikit-learn.org/stable/modu
 
 ### Results
 
+| model | Train ROC-AUC score | Validation ROC-AUC score | Test ROC-AUC score |
+| ----- | ------------------- | ------------------------ | ------------------ |
+| Logistic Regression | 0.801587 | 0.791295 | 0.773089 |
+| LightGBM | 0.836647 | 0.803069 | 0.780498 |
+| XGBoost | 0.854777 | 0.807432 | 0.782537 |
+| Random Forest | 0.875211 | 0.805114 | 0.779984 |
+
+- The Random Forest model is not the best model of this group. It doesn't have the highest test score, and it overfits the most.
+- It's debatable which of the remaining 3 models could be considered the best one. While XGBoost has the highest test score, it also overfits more than LightGBM or Logistic Regression.
 
 
 ### Ideas for further work
