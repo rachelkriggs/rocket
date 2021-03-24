@@ -24,6 +24,9 @@ The [data set from UC Irvine’s Machine Learning Repository](https://archive.ic
     - Dropped some features
 
 4. Models
+    - [Create a baseline model and experiment with several models using default parameters](https://github.com/rachelkriggs/rocket/blob/main/notebooks/03_model.ipynb)
+    - [Tune hyperparameters of select models](https://github.com/rachelkriggs/rocket/blob/main/notebooks/04_tune.ipynb)
+    - Run the models on the held-out test set
 
 ### Metric
 The metric used to evaluate the performance for this problem is the AUC-ROC, or Area Under the Curve of the Receive Operating Characteristic.
@@ -32,4 +35,17 @@ The metric used to evaluate the performance for this problem is the AUC-ROC, or 
 
 Because the target variable is imbalanced, if we used a simple accuracy metric, any random model would give us a high score of accuracy. Therefore we use the AUC-ROC metric, which looks at both the True Positive Rate and the False Positive Rate.
 
+See the [scikit-learn documentation on ROC](https://scikit-learn.org/stable/modules/model_evaluation.html#roc-metrics).
+
 ### Results
+
+
+
+### Ideas for further work
+- deal with correlated columns (by applying PCA, dropping features, or some other method)
+- deal with the '999' value in the `pdays` column (for now this was left as is)
+- deal with class imbalance in the target variable
+  - by oversampling: create copies of the minority class so we have the same number of training examples in each class
+  - not enough data to undersample
+- further engineer features
+- further tune models
